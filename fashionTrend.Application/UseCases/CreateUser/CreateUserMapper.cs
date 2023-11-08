@@ -8,12 +8,12 @@ using AutoMapper;
 
 namespace fashionTrend.Application.UseCases.CreateUser
 {
-    public class CreateUserMapper : Profile
+    public class CreateUserMapper : Profile
+{
+    public CreateUserMapper()
     {
-        public CreateUserMapper()
-        {
-            CreateMap<CreateUserMapper, User>();
-            CreateMap<User, CreateUserMapper>();
-        }
+        CreateMap<CreateUserRequest, User>();
+        CreateMap<User, CreateUserResponse>();
     }
+}
 }
